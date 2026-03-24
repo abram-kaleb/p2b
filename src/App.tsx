@@ -314,7 +314,7 @@ const QuizAlkitabCard = ({ onBack }: QuizAlkitabCardProps) => {
   const currentQ = questions[currentIndex];
 
   return (
-    <div className="fixed lg:absolute inset-0 z-[60] bg-white flex flex-col overflow-hidden mb-20">
+    <div className="fixed lg:absolute inset-0 z-[60] bg-white flex flex-col overflow-hidden">
       <header className="flex-none px-4 h-14 flex items-center justify-between">
         <button onClick={onBack} className="p-2 -ml-2 hover:bg-slate-100 rounded-full">
           <ArrowLeft size={20} />
