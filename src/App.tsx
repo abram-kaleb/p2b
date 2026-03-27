@@ -41,7 +41,7 @@ const QuizAlkitabCard = ({ onBack }: QuizAlkitabCardProps) => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [lives, setLives] = useState(5);
+  const [lives, setLives] = useState(6);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
   const [quizOver, setQuizOver] = useState(false);
@@ -109,7 +109,7 @@ const QuizAlkitabCard = ({ onBack }: QuizAlkitabCardProps) => {
     setIsLoading(true);
     setSubmitted(false);
     setPlayerName('');
-    setLives(5);
+    setLives(6);
     setScore(0);
     setCurrentIndex(0);
     setQuizOver(false);
@@ -317,7 +317,7 @@ const QuizAlkitabCard = ({ onBack }: QuizAlkitabCardProps) => {
     <div className="fixed lg:absolute inset-0 z-[60] bg-white flex flex-col overflow-hidden">
       <header className="flex-none px-4 h-14 flex items-center justify-between">
         <button onClick={onBack} className="p-2 -ml-2 hover:bg-slate-100 rounded-full">
-          <ArrowLeft size={20} />
+
         </button>
         <div className="text-right">
           <p className="text-[10px] font-black uppercase tracking-[0.1em] leading-none">Score: {score}</p>
@@ -332,7 +332,7 @@ const QuizAlkitabCard = ({ onBack }: QuizAlkitabCardProps) => {
 
               {/* Indikator Nyawa di bawah Judul */}
               <div className="flex justify-center gap-1.5">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(6)].map((_, i) => (
                   <Heart
                     key={i}
                     size={16}
